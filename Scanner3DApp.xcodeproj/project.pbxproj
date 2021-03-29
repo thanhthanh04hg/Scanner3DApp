@@ -1,0 +1,471 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FA9A4260260ED2AD002332D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9A425F260ED2AD002332D5 /* AppDelegate.swift */; };
+		FA9A4262260ED2AD002332D5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9A4261260ED2AD002332D5 /* SceneDelegate.swift */; };
+		FA9A4264260ED2AD002332D5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9A4263260ED2AD002332D5 /* ViewController.swift */; };
+		FA9A4267260ED2AD002332D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA9A4265260ED2AD002332D5 /* Main.storyboard */; };
+		FA9A4269260ED2B0002332D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA9A4268260ED2B0002332D5 /* Assets.xcassets */; };
+		FA9A426C260ED2B0002332D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA9A426A260ED2B0002332D5 /* LaunchScreen.storyboard */; };
+		FA9A42802612212C002332D5 /* ThresholdPanGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9A427F2612212C002332D5 /* ThresholdPanGestureRecognizer.swift */; };
+		FA9A42832612216E002332D5 /* ThresholdPinchGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9A42822612216E002332D5 /* ThresholdPinchGestureRecognizer.swift */; };
+		FA9A42862612218E002332D5 /* ThresholdRotationGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9A42852612218E002332D5 /* ThresholdRotationGestureRecognizer.swift */; };
+		FA9A42892612223D002332D5 /* ViewController+Gestures.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9A42882612223D002332D5 /* ViewController+Gestures.swift */; };
+		FA9A428C261222B0002332D5 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9A428B261222B0002332D5 /* Utilities.swift */; };
+		FA9A428F2612244A002332D5 /* ViewController+ApplycationStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9A428E2612244A002332D5 /* ViewController+ApplycationStates.swift */; };
+		FA9A42922612256E002332D5 /* Scan.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9A42912612256E002332D5 /* Scan.swift */; };
+		FA9A42A326122CF7002332D5 /* BoundingBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9A429626122CF6002332D5 /* BoundingBox.swift */; };
+		FA9A42A426122CF7002332D5 /* Snapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9A429726122CF6002332D5 /* Snapping.swift */; };
+		FA9A42A526122CF7002332D5 /* ObjectOrigin.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9A429826122CF6002332D5 /* ObjectOrigin.swift */; };
+		FA9A42A626122CF7002332D5 /* ObjectOriginAxis.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9A429926122CF6002332D5 /* ObjectOriginAxis.swift */; };
+		FA9A42A726122CF7002332D5 /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9A429A26122CF6002332D5 /* Tile.swift */; };
+		FA9A42A826122CF7002332D5 /* ScannedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9A429B26122CF7002332D5 /* ScannedObject.swift */; };
+		FA9A42A926122CF7002332D5 /* DetectedPointCloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9A429C26122CF7002332D5 /* DetectedPointCloud.swift */; };
+		FA9A42AA26122CF7002332D5 /* ScannedPointCloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9A429D26122CF7002332D5 /* ScannedPointCloud.swift */; };
+		FA9A42AB26122CF7002332D5 /* BoundingBoxSide.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9A429E26122CF7002332D5 /* BoundingBoxSide.swift */; };
+		FA9A42AC26122CF7002332D5 /* DetectedBoundingBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9A429F26122CF7002332D5 /* DetectedBoundingBox.swift */; };
+		FA9A42AD26122CF7002332D5 /* DetectedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9A42A026122CF7002332D5 /* DetectedObject.swift */; };
+		FA9A42AE26122CF7002332D5 /* Wireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9A42A126122CF7002332D5 /* Wireframe.swift */; };
+		FA9A42AF26122CF7002332D5 /* PointCloud+CreateVisualization.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9A42A226122CF7002332D5 /* PointCloud+CreateVisualization.swift */; };
+		FA9A42B426122FCF002332D5 /* TestRun.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9A42B326122FCF002332D5 /* TestRun.swift */; };
+		FA9A42B7261231D7002332D5 /* ViewController+SessionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9A42B6261231D7002332D5 /* ViewController+SessionInfo.swift */; };
+		FA9A42BA26123271002332D5 /* ARCameraTrackingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9A42B926123271002332D5 /* ARCameraTrackingState.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FA9A425C260ED2AD002332D5 /* Scanner3DApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scanner3DApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA9A425F260ED2AD002332D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FA9A4261260ED2AD002332D5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		FA9A4263260ED2AD002332D5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FA9A4266260ED2AD002332D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FA9A4268260ED2B0002332D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FA9A426B260ED2B0002332D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FA9A426D260ED2B0002332D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA9A427F2612212C002332D5 /* ThresholdPanGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThresholdPanGestureRecognizer.swift; sourceTree = "<group>"; };
+		FA9A42822612216E002332D5 /* ThresholdPinchGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThresholdPinchGestureRecognizer.swift; sourceTree = "<group>"; };
+		FA9A42852612218E002332D5 /* ThresholdRotationGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThresholdRotationGestureRecognizer.swift; sourceTree = "<group>"; };
+		FA9A42882612223D002332D5 /* ViewController+Gestures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Gestures.swift"; sourceTree = "<group>"; };
+		FA9A428B261222B0002332D5 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		FA9A428E2612244A002332D5 /* ViewController+ApplycationStates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+ApplycationStates.swift"; sourceTree = "<group>"; };
+		FA9A42912612256E002332D5 /* Scan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scan.swift; sourceTree = "<group>"; };
+		FA9A429626122CF6002332D5 /* BoundingBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BoundingBox.swift; path = "Scanner3DApp/3D UI and Visualizations /BoundingBox.swift"; sourceTree = "<group>"; };
+		FA9A429726122CF6002332D5 /* Snapping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Snapping.swift; path = "Scanner3DApp/3D UI and Visualizations /Snapping.swift"; sourceTree = "<group>"; };
+		FA9A429826122CF6002332D5 /* ObjectOrigin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ObjectOrigin.swift; path = "Scanner3DApp/3D UI and Visualizations /ObjectOrigin.swift"; sourceTree = "<group>"; };
+		FA9A429926122CF6002332D5 /* ObjectOriginAxis.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ObjectOriginAxis.swift; path = "Scanner3DApp/3D UI and Visualizations /ObjectOriginAxis.swift"; sourceTree = "<group>"; };
+		FA9A429A26122CF6002332D5 /* Tile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Tile.swift; path = "Scanner3DApp/3D UI and Visualizations /Tile.swift"; sourceTree = "<group>"; };
+		FA9A429B26122CF7002332D5 /* ScannedObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScannedObject.swift; path = "Scanner3DApp/3D UI and Visualizations /ScannedObject.swift"; sourceTree = "<group>"; };
+		FA9A429C26122CF7002332D5 /* DetectedPointCloud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetectedPointCloud.swift; path = "Scanner3DApp/3D UI and Visualizations /DetectedPointCloud.swift"; sourceTree = "<group>"; };
+		FA9A429D26122CF7002332D5 /* ScannedPointCloud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScannedPointCloud.swift; path = "Scanner3DApp/3D UI and Visualizations /ScannedPointCloud.swift"; sourceTree = "<group>"; };
+		FA9A429E26122CF7002332D5 /* BoundingBoxSide.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BoundingBoxSide.swift; path = "Scanner3DApp/3D UI and Visualizations /BoundingBoxSide.swift"; sourceTree = "<group>"; };
+		FA9A429F26122CF7002332D5 /* DetectedBoundingBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetectedBoundingBox.swift; path = "Scanner3DApp/3D UI and Visualizations /DetectedBoundingBox.swift"; sourceTree = "<group>"; };
+		FA9A42A026122CF7002332D5 /* DetectedObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetectedObject.swift; path = "Scanner3DApp/3D UI and Visualizations /DetectedObject.swift"; sourceTree = "<group>"; };
+		FA9A42A126122CF7002332D5 /* Wireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Wireframe.swift; path = "Scanner3DApp/3D UI and Visualizations /Wireframe.swift"; sourceTree = "<group>"; };
+		FA9A42A226122CF7002332D5 /* PointCloud+CreateVisualization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "PointCloud+CreateVisualization.swift"; path = "Scanner3DApp/3D UI and Visualizations /PointCloud+CreateVisualization.swift"; sourceTree = "<group>"; };
+		FA9A42B326122FCF002332D5 /* TestRun.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRun.swift; sourceTree = "<group>"; };
+		FA9A42B6261231D7002332D5 /* ViewController+SessionInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+SessionInfo.swift"; sourceTree = "<group>"; };
+		FA9A42B926123271002332D5 /* ARCameraTrackingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARCameraTrackingState.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FA9A4259260ED2AD002332D5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FA9A4253260ED2AD002332D5 = {
+			isa = PBXGroup;
+			children = (
+				FA9A425E260ED2AD002332D5 /* Scanner3DApp */,
+				FA9A425D260ED2AD002332D5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FA9A425D260ED2AD002332D5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FA9A425C260ED2AD002332D5 /* Scanner3DApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FA9A425E260ED2AD002332D5 /* Scanner3DApp */ = {
+			isa = PBXGroup;
+			children = (
+				FA9A42B126122D02002332D5 /* 3D UI and Visualization */,
+				FA9A4276260ED2D4002332D5 /* Modal */,
+				FA9A4275260ED2CB002332D5 /* Controller */,
+				FA9A4274260ED2C2002332D5 /* View */,
+				FA9A4268260ED2B0002332D5 /* Assets.xcassets */,
+				FA9A426D260ED2B0002332D5 /* Info.plist */,
+			);
+			path = Scanner3DApp;
+			sourceTree = "<group>";
+		};
+		FA9A4274260ED2C2002332D5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FA9A4265260ED2AD002332D5 /* Main.storyboard */,
+				FA9A426A260ED2B0002332D5 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FA9A4275260ED2CB002332D5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FA9A425F260ED2AD002332D5 /* AppDelegate.swift */,
+				FA9A4263260ED2AD002332D5 /* ViewController.swift */,
+				FA9A4261260ED2AD002332D5 /* SceneDelegate.swift */,
+				FA9A42882612223D002332D5 /* ViewController+Gestures.swift */,
+				FA9A428B261222B0002332D5 /* Utilities.swift */,
+				FA9A428E2612244A002332D5 /* ViewController+ApplycationStates.swift */,
+				FA9A42B326122FCF002332D5 /* TestRun.swift */,
+				FA9A42B6261231D7002332D5 /* ViewController+SessionInfo.swift */,
+				FA9A42B926123271002332D5 /* ARCameraTrackingState.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FA9A4276260ED2D4002332D5 /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+				FA9A427F2612212C002332D5 /* ThresholdPanGestureRecognizer.swift */,
+				FA9A42822612216E002332D5 /* ThresholdPinchGestureRecognizer.swift */,
+				FA9A42852612218E002332D5 /* ThresholdRotationGestureRecognizer.swift */,
+				FA9A42912612256E002332D5 /* Scan.swift */,
+			);
+			path = Modal;
+			sourceTree = "<group>";
+		};
+		FA9A42B126122D02002332D5 /* 3D UI and Visualization */ = {
+			isa = PBXGroup;
+			children = (
+				FA9A429E26122CF7002332D5 /* BoundingBoxSide.swift */,
+				FA9A429F26122CF7002332D5 /* DetectedBoundingBox.swift */,
+				FA9A42A026122CF7002332D5 /* DetectedObject.swift */,
+				FA9A429C26122CF7002332D5 /* DetectedPointCloud.swift */,
+				FA9A429826122CF6002332D5 /* ObjectOrigin.swift */,
+				FA9A429926122CF6002332D5 /* ObjectOriginAxis.swift */,
+				FA9A42A226122CF7002332D5 /* PointCloud+CreateVisualization.swift */,
+				FA9A429B26122CF7002332D5 /* ScannedObject.swift */,
+				FA9A429D26122CF7002332D5 /* ScannedPointCloud.swift */,
+				FA9A429726122CF6002332D5 /* Snapping.swift */,
+				FA9A429A26122CF6002332D5 /* Tile.swift */,
+				FA9A42A126122CF7002332D5 /* Wireframe.swift */,
+				FA9A429626122CF6002332D5 /* BoundingBox.swift */,
+			);
+			name = "3D UI and Visualization";
+			path = ..;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FA9A425B260ED2AD002332D5 /* Scanner3DApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA9A4270260ED2B0002332D5 /* Build configuration list for PBXNativeTarget "Scanner3DApp" */;
+			buildPhases = (
+				FA9A4258260ED2AD002332D5 /* Sources */,
+				FA9A4259260ED2AD002332D5 /* Frameworks */,
+				FA9A425A260ED2AD002332D5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Scanner3DApp;
+			productName = Scanner3DApp;
+			productReference = FA9A425C260ED2AD002332D5 /* Scanner3DApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FA9A4254260ED2AD002332D5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					FA9A425B260ED2AD002332D5 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+				};
+			};
+			buildConfigurationList = FA9A4257260ED2AD002332D5 /* Build configuration list for PBXProject "Scanner3DApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FA9A4253260ED2AD002332D5;
+			productRefGroup = FA9A425D260ED2AD002332D5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FA9A425B260ED2AD002332D5 /* Scanner3DApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FA9A425A260ED2AD002332D5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA9A426C260ED2B0002332D5 /* LaunchScreen.storyboard in Resources */,
+				FA9A4269260ED2B0002332D5 /* Assets.xcassets in Resources */,
+				FA9A4267260ED2AD002332D5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FA9A4258260ED2AD002332D5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA9A4264260ED2AD002332D5 /* ViewController.swift in Sources */,
+				FA9A42A826122CF7002332D5 /* ScannedObject.swift in Sources */,
+				FA9A42AF26122CF7002332D5 /* PointCloud+CreateVisualization.swift in Sources */,
+				FA9A42802612212C002332D5 /* ThresholdPanGestureRecognizer.swift in Sources */,
+				FA9A4260260ED2AD002332D5 /* AppDelegate.swift in Sources */,
+				FA9A42B426122FCF002332D5 /* TestRun.swift in Sources */,
+				FA9A42AD26122CF7002332D5 /* DetectedObject.swift in Sources */,
+				FA9A42A326122CF7002332D5 /* BoundingBox.swift in Sources */,
+				FA9A42BA26123271002332D5 /* ARCameraTrackingState.swift in Sources */,
+				FA9A42892612223D002332D5 /* ViewController+Gestures.swift in Sources */,
+				FA9A4262260ED2AD002332D5 /* SceneDelegate.swift in Sources */,
+				FA9A42832612216E002332D5 /* ThresholdPinchGestureRecognizer.swift in Sources */,
+				FA9A42B7261231D7002332D5 /* ViewController+SessionInfo.swift in Sources */,
+				FA9A42922612256E002332D5 /* Scan.swift in Sources */,
+				FA9A428F2612244A002332D5 /* ViewController+ApplycationStates.swift in Sources */,
+				FA9A42A626122CF7002332D5 /* ObjectOriginAxis.swift in Sources */,
+				FA9A42A426122CF7002332D5 /* Snapping.swift in Sources */,
+				FA9A428C261222B0002332D5 /* Utilities.swift in Sources */,
+				FA9A42AC26122CF7002332D5 /* DetectedBoundingBox.swift in Sources */,
+				FA9A42A726122CF7002332D5 /* Tile.swift in Sources */,
+				FA9A42AE26122CF7002332D5 /* Wireframe.swift in Sources */,
+				FA9A42A526122CF7002332D5 /* ObjectOrigin.swift in Sources */,
+				FA9A42AB26122CF7002332D5 /* BoundingBoxSide.swift in Sources */,
+				FA9A42A926122CF7002332D5 /* DetectedPointCloud.swift in Sources */,
+				FA9A42862612218E002332D5 /* ThresholdRotationGestureRecognizer.swift in Sources */,
+				FA9A42AA26122CF7002332D5 /* ScannedPointCloud.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FA9A4265260ED2AD002332D5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA9A4266260ED2AD002332D5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FA9A426A260ED2B0002332D5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA9A426B260ED2B0002332D5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FA9A426E260ED2B0002332D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FA9A426F260ED2B0002332D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FA9A4271260ED2B0002332D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V49G5SX493;
+				INFOPLIST_FILE = Scanner3DApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = thanhthanh.Scanner3DApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FA9A4272260ED2B0002332D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V49G5SX493;
+				INFOPLIST_FILE = Scanner3DApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = thanhthanh.Scanner3DApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FA9A4257260ED2AD002332D5 /* Build configuration list for PBXProject "Scanner3DApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA9A426E260ED2B0002332D5 /* Debug */,
+				FA9A426F260ED2B0002332D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA9A4270260ED2B0002332D5 /* Build configuration list for PBXNativeTarget "Scanner3DApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA9A4271260ED2B0002332D5 /* Debug */,
+				FA9A4272260ED2B0002332D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FA9A4254260ED2AD002332D5 /* Project object */;
+}

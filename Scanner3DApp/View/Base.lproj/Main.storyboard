@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Scanner3DApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gj8-Ja-1ym">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </arscnView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pdk-kO-keW">
+                                <rect key="frame" x="248.33333333333334" y="647.33333333333337" width="124.33333333333334" height="30"/>
+                                <state key="normal" title="End"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Adw-p6-vpN">
+                                <rect key="frame" x="41.333333333333336" y="647.33333333333337" width="124.33333333333331" height="30"/>
+                                <state key="normal" title="Back to home"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="pdk-kO-keW" firstAttribute="height" secondItem="Adw-p6-vpN" secondAttribute="height" id="7on-11-0e9"/>
+                            <constraint firstItem="gj8-Ja-1ym" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Bgu-gG-Mao"/>
+                            <constraint firstItem="gj8-Ja-1ym" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="DVF-By-FCe"/>
+                            <constraint firstItem="Adw-p6-vpN" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="1.8" id="TKA-cS-sme"/>
+                            <constraint firstItem="pdk-kO-keW" firstAttribute="centerX" secondItem="Adw-p6-vpN" secondAttribute="centerX" multiplier="3" id="aHG-N6-nrV"/>
+                            <constraint firstItem="pdk-kO-keW" firstAttribute="width" secondItem="Adw-p6-vpN" secondAttribute="width" id="d8e-gF-tFm"/>
+                            <constraint firstItem="Adw-p6-vpN" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.3" id="faI-4i-cLm"/>
+                            <constraint firstItem="Adw-p6-vpN" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.0407609" id="oeo-MN-Lsy"/>
+                            <constraint firstItem="gj8-Ja-1ym" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="rHt-pf-bWi"/>
+                            <constraint firstItem="Adw-p6-vpN" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" multiplier="0.5" id="zDp-24-r6w"/>
+                            <constraint firstItem="pdk-kO-keW" firstAttribute="centerY" secondItem="Adw-p6-vpN" secondAttribute="centerY" id="zIM-UQ-rD7"/>
+                            <constraint firstItem="gj8-Ja-1ym" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="zeZ-m8-3e6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="sceneView" destination="gj8-Ja-1ym" id="W82-kr-gP6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="2zA-OL-4XT">
+                    <connections>
+                        <action selector="didLongPress:" destination="BYZ-38-t0r" id="dsQ-Mw-sXm"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="O8r-Wc-6aF">
+                    <connections>
+                        <action selector="didOneFingerPan:" destination="BYZ-38-t0r" id="dBU-ah-pBv"/>
+                    </connections>
+                </panGestureRecognizer>
+                <tapGestureRecognizer id="plP-BX-NLg">
+                    <connections>
+                        <action selector="didTap:" destination="BYZ-38-t0r" id="kpH-tH-fEJ"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="95.652173913043484" y="75.815217391304358"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
