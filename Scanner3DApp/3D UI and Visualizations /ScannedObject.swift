@@ -93,10 +93,12 @@ class ScannedObject: SCNNode {
         // hasn't adjusted it yet.
         guard let boundingBox = self.boundingBox, !boundingBox.hasBeenAdjustedByUser else { return }
         
-        let hitTestResults = sceneView.hitTest(ViewController.instance!.screenCenter, types: .featurePoint)
+        let hitTestResults = sceneView.hitTest(ViewController.instance!.screenCenter, options: nil)
+//        hitTest(ViewController.instance!.screenCenter, types: .featurePoint)
         guard !hitTestResults.isEmpty else { return }
         
-        let userFocusPoint = hitTestResults[0].worldTransform.position
+        let userFocusPoint = hitTestResults[0].simdModelTransform.position
+//        worldTransform.position
         boundingBox.fitOverPointCloud(pointCloud, focusPoint: userFocusPoint)
     }
     

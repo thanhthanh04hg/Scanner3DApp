@@ -19,7 +19,6 @@
 		FA9A42892612223D002332D5 /* ViewController+Gestures.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9A42882612223D002332D5 /* ViewController+Gestures.swift */; };
 		FA9A428C261222B0002332D5 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9A428B261222B0002332D5 /* Utilities.swift */; };
 		FA9A428F2612244A002332D5 /* ViewController+ApplycationStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9A428E2612244A002332D5 /* ViewController+ApplycationStates.swift */; };
-		FA9A42922612256E002332D5 /* Scan.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9A42912612256E002332D5 /* Scan.swift */; };
 		FA9A42A326122CF7002332D5 /* BoundingBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9A429626122CF6002332D5 /* BoundingBox.swift */; };
 		FA9A42A426122CF7002332D5 /* Snapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9A429726122CF6002332D5 /* Snapping.swift */; };
 		FA9A42A526122CF7002332D5 /* ObjectOrigin.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9A429826122CF6002332D5 /* ObjectOrigin.swift */; };
@@ -36,6 +35,8 @@
 		FA9A42B426122FCF002332D5 /* TestRun.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9A42B326122FCF002332D5 /* TestRun.swift */; };
 		FA9A42B7261231D7002332D5 /* ViewController+SessionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9A42B6261231D7002332D5 /* ViewController+SessionInfo.swift */; };
 		FA9A42BA26123271002332D5 /* ARCameraTrackingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9A42B926123271002332D5 /* ARCameraTrackingState.swift */; };
+		FA9A42D1261484FE002332D5 /* Scan.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9A42D0261484FE002332D5 /* Scan.swift */; };
+		FA9A42D426148817002332D5 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9A42D326148817002332D5 /* Message.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,7 +54,6 @@
 		FA9A42882612223D002332D5 /* ViewController+Gestures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Gestures.swift"; sourceTree = "<group>"; };
 		FA9A428B261222B0002332D5 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		FA9A428E2612244A002332D5 /* ViewController+ApplycationStates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+ApplycationStates.swift"; sourceTree = "<group>"; };
-		FA9A42912612256E002332D5 /* Scan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scan.swift; sourceTree = "<group>"; };
 		FA9A429626122CF6002332D5 /* BoundingBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BoundingBox.swift; path = "Scanner3DApp/3D UI and Visualizations /BoundingBox.swift"; sourceTree = "<group>"; };
 		FA9A429726122CF6002332D5 /* Snapping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Snapping.swift; path = "Scanner3DApp/3D UI and Visualizations /Snapping.swift"; sourceTree = "<group>"; };
 		FA9A429826122CF6002332D5 /* ObjectOrigin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ObjectOrigin.swift; path = "Scanner3DApp/3D UI and Visualizations /ObjectOrigin.swift"; sourceTree = "<group>"; };
@@ -70,6 +70,8 @@
 		FA9A42B326122FCF002332D5 /* TestRun.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRun.swift; sourceTree = "<group>"; };
 		FA9A42B6261231D7002332D5 /* ViewController+SessionInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+SessionInfo.swift"; sourceTree = "<group>"; };
 		FA9A42B926123271002332D5 /* ARCameraTrackingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARCameraTrackingState.swift; sourceTree = "<group>"; };
+		FA9A42D0261484FE002332D5 /* Scan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scan.swift; sourceTree = "<group>"; };
+		FA9A42D326148817002332D5 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,8 +104,8 @@
 		FA9A425E260ED2AD002332D5 /* Scanner3DApp */ = {
 			isa = PBXGroup;
 			children = (
+				FA9A42CA26146B6F002332D5 /* GestureRecognizer */,
 				FA9A42B126122D02002332D5 /* 3D UI and Visualization */,
-				FA9A4276260ED2D4002332D5 /* Modal */,
 				FA9A4275260ED2CB002332D5 /* Controller */,
 				FA9A4274260ED2C2002332D5 /* View */,
 				FA9A4268260ED2B0002332D5 /* Assets.xcassets */,
@@ -117,6 +119,7 @@
 			children = (
 				FA9A4265260ED2AD002332D5 /* Main.storyboard */,
 				FA9A426A260ED2B0002332D5 /* LaunchScreen.storyboard */,
+				FA9A42D326148817002332D5 /* Message.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -125,27 +128,17 @@
 			isa = PBXGroup;
 			children = (
 				FA9A425F260ED2AD002332D5 /* AppDelegate.swift */,
-				FA9A4263260ED2AD002332D5 /* ViewController.swift */,
 				FA9A4261260ED2AD002332D5 /* SceneDelegate.swift */,
-				FA9A42882612223D002332D5 /* ViewController+Gestures.swift */,
 				FA9A428B261222B0002332D5 /* Utilities.swift */,
-				FA9A428E2612244A002332D5 /* ViewController+ApplycationStates.swift */,
 				FA9A42B326122FCF002332D5 /* TestRun.swift */,
+				FA9A4263260ED2AD002332D5 /* ViewController.swift */,
+				FA9A42882612223D002332D5 /* ViewController+Gestures.swift */,
+				FA9A428E2612244A002332D5 /* ViewController+ApplycationStates.swift */,
 				FA9A42B6261231D7002332D5 /* ViewController+SessionInfo.swift */,
 				FA9A42B926123271002332D5 /* ARCameraTrackingState.swift */,
+				FA9A42D0261484FE002332D5 /* Scan.swift */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		FA9A4276260ED2D4002332D5 /* Modal */ = {
-			isa = PBXGroup;
-			children = (
-				FA9A427F2612212C002332D5 /* ThresholdPanGestureRecognizer.swift */,
-				FA9A42822612216E002332D5 /* ThresholdPinchGestureRecognizer.swift */,
-				FA9A42852612218E002332D5 /* ThresholdRotationGestureRecognizer.swift */,
-				FA9A42912612256E002332D5 /* Scan.swift */,
-			);
-			path = Modal;
 			sourceTree = "<group>";
 		};
 		FA9A42B126122D02002332D5 /* 3D UI and Visualization */ = {
@@ -167,6 +160,16 @@
 			);
 			name = "3D UI and Visualization";
 			path = ..;
+			sourceTree = "<group>";
+		};
+		FA9A42CA26146B6F002332D5 /* GestureRecognizer */ = {
+			isa = PBXGroup;
+			children = (
+				FA9A427F2612212C002332D5 /* ThresholdPanGestureRecognizer.swift */,
+				FA9A42822612216E002332D5 /* ThresholdPinchGestureRecognizer.swift */,
+				FA9A42852612218E002332D5 /* ThresholdRotationGestureRecognizer.swift */,
+			);
+			path = GestureRecognizer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,14 +255,15 @@
 				FA9A4262260ED2AD002332D5 /* SceneDelegate.swift in Sources */,
 				FA9A42832612216E002332D5 /* ThresholdPinchGestureRecognizer.swift in Sources */,
 				FA9A42B7261231D7002332D5 /* ViewController+SessionInfo.swift in Sources */,
-				FA9A42922612256E002332D5 /* Scan.swift in Sources */,
 				FA9A428F2612244A002332D5 /* ViewController+ApplycationStates.swift in Sources */,
 				FA9A42A626122CF7002332D5 /* ObjectOriginAxis.swift in Sources */,
 				FA9A42A426122CF7002332D5 /* Snapping.swift in Sources */,
+				FA9A42D1261484FE002332D5 /* Scan.swift in Sources */,
 				FA9A428C261222B0002332D5 /* Utilities.swift in Sources */,
 				FA9A42AC26122CF7002332D5 /* DetectedBoundingBox.swift in Sources */,
 				FA9A42A726122CF7002332D5 /* Tile.swift in Sources */,
 				FA9A42AE26122CF7002332D5 /* Wireframe.swift in Sources */,
+				FA9A42D426148817002332D5 /* Message.swift in Sources */,
 				FA9A42A526122CF7002332D5 /* ObjectOrigin.swift in Sources */,
 				FA9A42AB26122CF7002332D5 /* BoundingBoxSide.swift in Sources */,
 				FA9A42A926122CF7002332D5 /* DetectedPointCloud.swift in Sources */,

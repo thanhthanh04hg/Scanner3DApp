@@ -246,32 +246,31 @@ extension ViewController {
         }
     }
     
-//    @objc
-//    func ghostBoundingBoxWasCreated(_ notification: Notification) {
-//        if let scan = scan, scan.state == .ready {
-//            DispatchQueue.main.async {
+    @objc
+    func ghostBoundingBoxWasCreated(_ notification: Notification) {
+        if let scan = scan, scan.state == .ready {
+            DispatchQueue.main.async {
 //                self.nextButton.isEnabled = true
-//                self.displayInstruction(Message("Tap 'Next' to create an approximate bounding box around the object you want to scan."))
-//            }
-//        }
-//    }
-//
-//    @objc
-//    func ghostBoundingBoxWasRemoved(_ notification: Notification) {
-//        if let scan = scan, scan.state == .ready {
-//            DispatchQueue.main.async {
-//                self.nextButton.isEnabled = false
-//                self.displayInstruction(Message("Point at a nearby object to scan."))
-//            }
-//        }
-//    }
-//
-//    @objc
-//    func boundingBoxWasCreated(_ notification: Notification) {
-//        if let scan = scan, scan.state == .defineBoundingBox {
-//            DispatchQueue.main.async {
+                self.displayInstruction(Message("Tap 'Next' to create an approximate bounding box around the object you want to scan."))
+            }
+        }
+    }
+
+    @objc
+    func ghostBoundingBoxWasRemoved(_ notification: Notification) {
+        if let scan = scan, scan.state == .ready {
+            DispatchQueue.main.async {
+                self.displayInstruction(Message("Point at a nearby object to scan."))
+            }
+        }
+    }
+
+    @objc
+    func boundingBoxWasCreated(_ notification: Notification) {
+        if let scan = scan, scan.state == .defineBoundingBox {
+            DispatchQueue.main.async {
 //                self.nextButton.isEnabled = true
-//            }
-//        }
-//    }
+            }
+        }
+    }
 }

@@ -10,7 +10,7 @@ import ARKit
 import SceneKit
 class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate {
     
-    
+    @IBOutlet weak var instructionLabel: MessageLabel!
     @IBOutlet var sceneView: ARSCNView!
     let shapeLayer = CAShapeLayer()
     let tapGesture = UITapGestureRecognizer()
@@ -60,7 +60,34 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate {
         
         sceneView.delegate = self
         sceneView.session.delegate = self
+        
+        
+        
+        // Prevent the screen from being dimmed after a while.
+        UIApplication.shared.isIdleTimerDisabled = true
+        
+        let notificationCenter = NotificationCenter.default
+        notificationCenter.addObserver(self, selector: #selector(scanningStateChanged), name: Scan.stateChangedNotification, object: nil)
+        notificationCenter.addObserver(self, selector: #selector(ghostBoundingBoxWasCreated),
+                                       name: ScannedObject.ghostBoundingBoxCreatedNotification, object: nil)
+        notificationCenter.addObserver(self, selector: #selector(ghostBoundingBoxWasRemoved),
+                                       name: ScannedObject.ghostBoundingBoxRemovedNotification, object: nil)
+        notificationCenter.addObserver(self, selector: #selector(boundingBoxWasCreated),
+                                       name: ScannedObject.boundingBoxCreatedNotification, object: nil)
+        notificationCenter.addObserver(self, selector: #selector(scanPercentageChanged),
+                                       name: BoundingBox.scanPercentageChangedNotification, object: nil)
+        notificationCenter.addObserver(self, selector: #selector(boundingBoxPositionOrExtentChanged(_:)),
+                                       name: BoundingBox.extentChangedNotification, object: nil)
+        notificationCenter.addObserver(self, selector: #selector(boundingBoxPositionOrExtentChanged(_:)),
+                                       name: BoundingBox.positionChangedNotification, object: nil)
+        notificationCenter.addObserver(self, selector: #selector(objectOriginPositionChanged(_:)),
+                                       name: ObjectOrigin.positionChangedNotification, object: nil)
+        notificationCenter.addObserver(self, selector: #selector(displayWarningIfInLowPowerMode),
+                                       name: Notification.Name.NSProcessInfoPowerStateDidChange, object: nil)
         state = .startARSession
+        
+        
+        
         
     }
     override func viewDidLayoutSubviews() {
@@ -72,7 +99,10 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate {
     }
     
 
-
+    @IBAction func endBtnNext(_ sender: Any) {
+        switchToNextState()
+    }
+    
     fileprivate func createProgressCircle(){
         let position = UIView(frame: CGRect(x: view.bounds.width/2, y: view.bounds.height*4/5, width: 20, height: 20)).center
         let circularPath = UIBezierPath(arcCenter: position, radius: 20, startAngle: 0, endAngle: 2*CGFloat.pi, clockwise: true)
@@ -97,6 +127,11 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate {
         basicAnimation.isRemovedOnCompletion = false
         shapeLayer.add(basicAnimation, forKey: "urSoBasic")
         
+    }
+    
+    func displayInstruction(_ message: Message) {
+        instructionLabel.display(message)
+//        instructionsVisible = true
     }
 
     func showAlert(title: String, message: String, buttonTitle: String? = "OK", showCancel: Bool = false, buttonHandler: ((UIAlertAction) -> Void)? = nil) {
@@ -128,6 +163,61 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate {
         } else {
             showAlertBlock()
         }
+    }
+    
+    @objc
+    func scanPercentageChanged(_ notification: Notification) {
+        guard let percentage = notification.userInfo?[BoundingBox.scanPercentageUserInfoKey] as? Int else { return }
+        
+        // Switch to the next state if the scan is complete.
+        if percentage >= 100 {
+            switchToNextState()
+            return
+        }
+//        DispatchQueue.main.async {
+//            self.setNavigationBarTitle("Scan (\(percentage)%)")
+//        }
+    }
+    
+    @objc
+    func boundingBoxPositionOrExtentChanged(_ notification: Notification) {
+        guard let box = notification.object as? BoundingBox,
+            let cameraPos = sceneView.pointOfView?.simdWorldPosition else { return }
+        
+        let xString = String(format: "width: %.2f", box.extent.x)
+        let yString = String(format: "height: %.2f", box.extent.y)
+        let zString = String(format: "length: %.2f", box.extent.z)
+        let distanceFromCamera = String(format: "%.2f m", distance(box.simdWorldPosition, cameraPos))
+        displayMessage("Current bounding box: \(distanceFromCamera) away\n\(xString) \(yString) \(zString)", expirationTime: 1.5)
+    }
+    
+    @objc
+    func objectOriginPositionChanged(_ notification: Notification) {
+        guard let node = notification.object as? ObjectOrigin else { return }
+        
+        // Display origin position w.r.t. bounding box
+        let xString = String(format: "x: %.2f", node.position.x)
+        let yString = String(format: "y: %.2f", node.position.y)
+        let zString = String(format: "z: %.2f", node.position.z)
+        displayMessage("Current local origin position in meters:\n\(xString) \(yString) \(zString)", expirationTime: 1.5)
+    }
+    
+    @objc
+    func displayWarningIfInLowPowerMode() {
+        if ProcessInfo.processInfo.isLowPowerModeEnabled {
+            let title = "Low Power Mode is enabled"
+            let message = "Performance may be impacted. For best scanning results, disable Low Power Mode in Settings > Battery, and restart the scan."
+            let buttonTitle = "OK"
+            self.showAlert(title: title, message: message, buttonTitle: buttonTitle, showCancel: false)
+        }
+    }
+    
+    override var shouldAutorotate: Bool {
+        // Lock UI rotation after starting a scan
+        if let scan = scan, scan.state != .ready {
+            return false
+        }
+        return true
     }
 }
 

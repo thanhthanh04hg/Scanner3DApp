@@ -11,22 +11,39 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Scanner3DApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="Scanner3DApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gj8-Ja-1ym">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="14f-Dc-bBV" appends="YES" id="tf6-ei-cdc"/>
+                                    <outletCollection property="gestureRecognizers" destination="dAC-NU-Fe5" appends="YES" id="CxZ-WP-dDT"/>
+                                    <outletCollection property="gestureRecognizers" destination="P3S-HF-bXe" appends="YES" id="RBk-Bw-cTu"/>
+                                    <outletCollection property="gestureRecognizers" destination="2zA-OL-4XT" appends="YES" id="Xj3-2H-jAr"/>
+                                    <outletCollection property="gestureRecognizers" destination="O8r-Wc-6aF" appends="YES" id="1Zf-EL-XuJ"/>
+                                    <outletCollection property="gestureRecognizers" destination="plP-BX-NLg" appends="YES" id="e4v-KL-NIM"/>
+                                </connections>
                             </arscnView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pdk-kO-keW">
                                 <rect key="frame" x="248.33333333333334" y="647.33333333333337" width="124.33333333333334" height="30"/>
                                 <state key="normal" title="End"/>
+                                <connections>
+                                    <action selector="endBtnNext:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dlY-xs-YyL"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Adw-p6-vpN">
                                 <rect key="frame" x="41.333333333333336" y="647.33333333333337" width="124.33333333333331" height="30"/>
                                 <state key="normal" title="Back to home"/>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ka-Yk-50Z">
+                                <rect key="frame" x="186" y="504.66666666666674" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -35,10 +52,12 @@
                             <constraint firstItem="pdk-kO-keW" firstAttribute="height" secondItem="Adw-p6-vpN" secondAttribute="height" id="7on-11-0e9"/>
                             <constraint firstItem="gj8-Ja-1ym" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Bgu-gG-Mao"/>
                             <constraint firstItem="gj8-Ja-1ym" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="DVF-By-FCe"/>
+                            <constraint firstItem="8Ka-Yk-50Z" firstAttribute="centerY" secondItem="gj8-Ja-1ym" secondAttribute="centerY" multiplier="1.4" id="JbL-Ud-WXc"/>
                             <constraint firstItem="Adw-p6-vpN" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="1.8" id="TKA-cS-sme"/>
                             <constraint firstItem="pdk-kO-keW" firstAttribute="centerX" secondItem="Adw-p6-vpN" secondAttribute="centerX" multiplier="3" id="aHG-N6-nrV"/>
                             <constraint firstItem="pdk-kO-keW" firstAttribute="width" secondItem="Adw-p6-vpN" secondAttribute="width" id="d8e-gF-tFm"/>
                             <constraint firstItem="Adw-p6-vpN" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.3" id="faI-4i-cLm"/>
+                            <constraint firstItem="8Ka-Yk-50Z" firstAttribute="centerX" secondItem="gj8-Ja-1ym" secondAttribute="centerX" id="lSE-b1-xPG"/>
                             <constraint firstItem="Adw-p6-vpN" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.0407609" id="oeo-MN-Lsy"/>
                             <constraint firstItem="gj8-Ja-1ym" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="rHt-pf-bWi"/>
                             <constraint firstItem="Adw-p6-vpN" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" multiplier="0.5" id="zDp-24-r6w"/>
@@ -47,23 +66,45 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="instructionLabel" destination="JbL-Ud-WXc" id="FDP-aR-Pun"/>
                         <outlet property="sceneView" destination="gj8-Ja-1ym" id="W82-kr-gP6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="dAC-NU-Fe5" customClass="ThresholdPanGestureRecognizer" customModule="Scanner3DApp" customModuleProvider="target">
+                    <connections>
+                        <action selector="didTwoFingerPan:" destination="BYZ-38-t0r" id="7YM-DP-HtV"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="r1U-0d-HO0"/>
+                    </connections>
+                </panGestureRecognizer>
+                <pinchGestureRecognizer id="14f-Dc-bBV" customClass="ThresholdPinchGestureRecognizer" customModule="Scanner3DApp" customModuleProvider="target">
+                    <connections>
+                        <action selector="didPinch:" destination="BYZ-38-t0r" id="xYi-2z-jSB"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="vnB-XA-61O"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <rotationGestureRecognizer id="P3S-HF-bXe" customClass="ThresholdRotationGestureRecognizer" customModule="Scanner3DApp" customModuleProvider="target">
+                    <connections>
+                        <action selector="didRotate:" destination="BYZ-38-t0r" id="gRQ-F8-NPn"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="Qlz-2H-29Y"/>
+                    </connections>
+                </rotationGestureRecognizer>
                 <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="2zA-OL-4XT">
                     <connections>
-                        <action selector="didLongPress:" destination="BYZ-38-t0r" id="dsQ-Mw-sXm"/>
+                        <action selector="didLongPress:" destination="BYZ-38-t0r" id="FPj-O0-wKy"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="SVc-sG-GPY"/>
                     </connections>
                 </pongPressGestureRecognizer>
                 <panGestureRecognizer minimumNumberOfTouches="1" id="O8r-Wc-6aF">
                     <connections>
-                        <action selector="didOneFingerPan:" destination="BYZ-38-t0r" id="dBU-ah-pBv"/>
+                        <action selector="didOneFingerPan:" destination="BYZ-38-t0r" id="Lbj-Xo-QsY"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="wbM-WC-o1o"/>
                     </connections>
                 </panGestureRecognizer>
                 <tapGestureRecognizer id="plP-BX-NLg">
                     <connections>
-                        <action selector="didTap:" destination="BYZ-38-t0r" id="kpH-tH-fEJ"/>
+                        <action selector="didTap:" destination="BYZ-38-t0r" id="lIH-gl-nKr"/>
+                        <outlet property="delegate" destination="8bC-Xf-vdC" id="gIY-zI-U0a"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
